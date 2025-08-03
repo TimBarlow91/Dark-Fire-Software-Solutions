@@ -40,7 +40,7 @@ export default function Navbar() {
                     {/* Logo + Brand (Home Link) */}
                     <Link to="/" className="flex items-center space-x-3 overflow-hidden">
                         <img
-                            src="/img/logo.png"
+                            src="/public/logo.png"
                             alt="Logo"
                             className="h-10 w-auto drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]"
                         />
