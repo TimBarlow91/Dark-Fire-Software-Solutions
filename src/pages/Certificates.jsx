@@ -1,0 +1,1 @@
+export default function Certificates() { return <h1 className="text-2xl">Our Certificates</h1> }
