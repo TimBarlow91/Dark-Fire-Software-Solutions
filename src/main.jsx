@@ -1,4 +1,4 @@
-import { inject } from '@vercel/analytics';
+import { inject } from "@vercel/analytics";
 inject();
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
