@@ -76,15 +76,16 @@ export default function Home() {
 
                 {/* Animated Glowing Floating Dots Background */}
                 <div className="absolute inset-0 z-0 pointer-events-none floating-dots">
-                    {[...Array(isMobile ? 80 : 300)].map((_, i) => {
+                    {[...Array(isMobile ? 60 : 300)].map((_, i) => {
+                        // Style for drifting animation (wrapper)
                         const translateStyle = {
                             top: `${Math.random() * 100}%`,
                             left: `${Math.random() * 100}%`,
                             animationDelay: `${Math.random() * 12}s`,
-                            animationDuration: `${12 + Math.random() * 10}s`,
-                            willChange: 'transform',
+                            animationDuration: `${10 + Math.random() * 8}s`,
                         };
                         // Style for pulsing animation (inner dot)
+
                         const scaleStyle = {
                             animationDelay: `${Math.random() * 2}s`,
                             animationDuration: `2s`,
