@@ -26,7 +26,7 @@ export default function Footer() {
                     <p className="text-sm text-gray-400">Connect with us:</p>
                     <div className="flex gap-4 text-2xl">
                         <a
-                            href="https://facebook.com/YourPage"
+                            href="https://www.facebook.com/profile.php?id=61575693601428"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group relative"
@@ -36,7 +36,7 @@ export default function Footer() {
                         </a>
 
                         <a
-                            href="https://instagram.com/YourPage"
+                            href="https://www.instagram.com/darkfiresoftware/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group relative"
@@ -46,7 +46,7 @@ export default function Footer() {
                         </a>
 
                         <a
-                            href="https://wa.me/27831234567"
+                            href="https://wa.me/27645145714"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group relative"
