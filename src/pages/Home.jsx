@@ -76,7 +76,7 @@ export default function Home() {
 
                 {/* Animated Glowing Floating Dots Background */}
                 <div className="absolute inset-0 z-0 pointer-events-none floating-dots">
-                    {[...Array(isMobile ? 60 : 300)].map((_, i) => {
+                    {[...Array(80)].map((_, i) => {
                         // Style for drifting animation (wrapper)
                         const translateStyle = {
                             top: `${Math.random() * 100}%`,
