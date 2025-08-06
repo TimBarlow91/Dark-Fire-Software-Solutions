@@ -1,4 +1,5 @@
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
@@ -15,10 +16,10 @@ export default function Footer() {
 
                 {/* Quick Links */}
                 <div className="flex flex-col gap-2 text-sm">
-                    <a href="/" className="hover:text-white transition">Home</a>
-                    <a href="/about" className="hover:text-white transition">About</a>
-                    <a href="/services" className="hover:text-white transition">Services</a>
-                    <a href="/contact" className="hover:text-white transition">Contact</a>
+                    <Link to="/" className="hover:text-white transition">Home</Link>
+                    <Link to="/about" className="hover:text-white transition">About</Link>
+                    <Link to="/services" className="hover:text-white transition">Services</Link>
+                    <Link to="/contact" className="hover:text-white transition">Contact</Link>
                 </div>
 
                 {/* Social Icons */}

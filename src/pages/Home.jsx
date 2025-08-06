@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import GlowDivider from '../components/GlowDivider';
 import SmokeBackground from '../components/SmokeBackground';
 
@@ -58,12 +59,12 @@ export default function Home() {
                 <p className="relative z-10 mt-4 text-lg md:text-xl text-gray-300 max-w-xl mx-auto">
                     Ready to bring your vision to life? Let us help you build innovative web and app solutions tailored to your needs. - Your vision, our FIRE!
                 </p>
-                <a
-                    href="/contact"
+                <Link
+                    to="/contact"
                     className="soft-pulse relative z-10 inline-block mt-8 bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-xl border-2 border-blue-700 hover:border-red-500 transition duration-300 shadow-[0_0_10px_rgba(255,0,0,0.7)]"
                 >
                     Bring your vision to life!
-                </a>
+                </Link>
                 <p className="relative z-10 mt-4 text-lg md:text-xl text-gray-300 max-w-xl mx-auto">
                     Want to first browse around? Feel free to explore and contact us when you're ready!
                 </p>
@@ -77,15 +78,12 @@ export default function Home() {
                 {/* Animated Glowing Floating Dots Background */}
                 <div className="absolute inset-0 z-0 pointer-events-none floating-dots">
                     {[...Array(80)].map((_, i) => {
-                        // Style for drifting animation (wrapper)
                         const translateStyle = {
                             top: `${Math.random() * 100}%`,
                             left: `${Math.random() * 100}%`,
                             animationDelay: `${Math.random() * 12}s`,
                             animationDuration: `${10 + Math.random() * 8}s`,
                         };
-                        // Style for pulsing animation (inner dot)
-
                         const scaleStyle = {
                             animationDelay: `${Math.random() * 2}s`,
                             animationDuration: `2s`,
@@ -179,14 +177,14 @@ export default function Home() {
                 <p className="text-lg md:text-xl mb-10 text-red-400 max-w-xl mx-auto drop-shadow-[0_0_6px_red]">
                     Let’s bring your vision to life with powerful, custom-built software solutions.
                 </p>
-                <a
-                    href="/contact"
+                <Link
+                    to="/contact"
                     className="inline-block bg-red-700 hover:bg-red-800 focus:bg-red-900 text-white font-semibold py-4 px-12 rounded-lg border border-red-700 shadow-md shadow-red-700 transition duration-300 ease-in-out
                         hover:shadow-[0_0_15px_rgba(255,0,0,0.8)] focus:shadow-[0_0_20px_rgba(255,0,0,1)] active:scale-[0.98] active:shadow-[0_0_10px_rgba(255,0,0,0.7)]"
                     aria-label="Contact Dark Fire Software Solutions"
                 >
                     Contact Us
-                </a>
+                </Link>
             </section>
         </>
     );
