@@ -7,7 +7,7 @@ export default function Certificates() {
     const shineRefs = useRef([]);
     const certRefs = useRef([]);
 
-    // Auto-rotation logic
+    // Auto rotation
     useEffect(() => {
         const intervals = certRefs.current.map((ref, i) => {
             let angle = 0;
