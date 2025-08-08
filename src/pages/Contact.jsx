@@ -175,6 +175,21 @@ export default function Contact() {
                 </div>
             </div>
 
+            {/* WhatsApp CTA */}
+            <div className="text-center mt-16">
+                <p className="text-lg mb-4">
+                    Prefer a WhatsApp message to chat in your own time at your own convenience?
+                </p>
+                <a
+                    href="https://wa.me/27645145714"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow-[0_0_10px_rgba(0,255,0,0.5)] hover:shadow-[0_0_15px_rgba(0,255,0,0.8)] transition"
+                >
+                    Chat Instantly
+                </a>
+            </div>
+
             {/* Map */}
             <div className="mt-16">
                 <h2 className="text-center text-xl font-semibold mb-4">We are based in Cape Town, but we work remotely.</h2>
@@ -191,21 +206,6 @@ export default function Contact() {
                         loading="lazy"
                     ></iframe>
                 </div>
-            </div>
-
-            {/* WhatsApp CTA */}
-            <div className="text-center mt-16">
-                <p className="text-lg mb-4">
-                    Prefer a WhatsApp message to chat in your own time at your own convenience?
-                </p>
-                <a
-                    href="https://wa.me/27645145714"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow-[0_0_10px_rgba(0,255,0,0.5)] hover:shadow-[0_0_15px_rgba(0,255,0,0.8)] transition"
-                >
-                    Chat Instantly
-                </a>
             </div>
         </div>
     );

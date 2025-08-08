@@ -34,7 +34,7 @@ export default function Navbar() {
 
     return (
         <header className="fixed top-0 z-50 w-full flex justify-center">
-            <div className="mt-2 rounded-xl w-[98%] bg-gradient-to-r from-black via-red-900 to-black border-b border-white/10 shadow-[0_4px_10px_rgba(255,255,255,0.15)] backdrop-blur-md">
+            <div className="rounded-xl w-[100%] bg-gradient-to-r from-black via-red-900 to-black shadow-[0_0_15px_rgba(255,0,0,0.7)] backdrop-blur-md">
                 <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
 
                     {/* Logo + Brand (Home Link) */}
@@ -109,8 +109,7 @@ export default function Navbar() {
                                         `block px-2 py-1 rounded-md transition-all transform
                                         ${isActive ? 'text-red-500 underline' : ''}
                                         hover:bg-white/10 hover:text-red-500
-                                        ${menuOpen ? `opacity-100 translate-y-0 delay-${i * 100}` : 'opacity-0 -translate-y-1'}
-                                        `
+                                        ${menuOpen ? `opacity-100 translate-y-0 delay-${i * 100}` : 'opacity-0 -translate-y-1'}`
                                     }
                                     style={{ transitionDelay: `${i * 80}ms` }}
                                 >
