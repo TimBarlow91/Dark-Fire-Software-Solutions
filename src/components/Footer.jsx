@@ -1,5 +1,4 @@
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
@@ -16,44 +15,41 @@ export default function Footer() {
 
                 {/* Quick Links */}
                 <div className="flex flex-col gap-2 text-sm">
-                    <Link to="/" className="hover:text-white transition">Home</Link>
-                    <Link to="/about" className="hover:text-white transition">About</Link>
-                    <Link to="/services" className="hover:text-white transition">Services</Link>
-                    <Link to="/contact" className="hover:text-white transition">Contact</Link>
+                    <a href="/" className="hover:text-white transition">Home</a>
+                    <a href="/about" className="hover:text-white transition">About</a>
+                    <a href="/services" className="hover:text-white transition">Services</a>
+                    <a href="/contact" className="hover:text-white transition">Contact</a>
                 </div>
 
                 {/* Social Icons */}
                 <div className="flex flex-col items-center md:items-end gap-4">
                     <p className="text-sm text-gray-400">Connect with us:</p>
-                    <div className="flex gap-4 text-2xl">
+                    <div className="flex gap-6 text-2xl">
                         <a
                             href="https://www.facebook.com/profile.php?id=61575693601428"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative"
+                            className="group transition-transform duration-300 hover:scale-110"
                         >
-                            <FaFacebookF className="text-gray-300 group-hover:text-white transition duration-200 group-hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.4)] active:scale-90" />
-                            <span className="tooltip">Facebook</span>
+                            <FaFacebookF className="text-[#1877F2] transition-all duration-300 group-hover:drop-shadow-[0_0_10px_#1877F2]" />
                         </a>
 
                         <a
                             href="https://www.instagram.com/darkfiresoftware/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative"
+                            className="group transition-transform duration-300 hover:scale-110"
                         >
-                            <FaInstagram className="text-gray-300 group-hover:text-white transition duration-200 group-hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.4)] active:scale-90" />
-                            <span className="tooltip">Instagram</span>
+                            <FaInstagram className="text-[#E4405F] transition-all duration-300 group-hover:drop-shadow-[0_0_10px_#E4405F]" />
                         </a>
 
                         <a
                             href="https://wa.me/27645145714"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative"
+                            className="group transition-transform duration-300 hover:scale-110"
                         >
-                            <FaWhatsapp className="text-gray-300 group-hover:text-green-400 transition duration-200 group-hover:drop-shadow-[0_0_6px_rgba(0,255,0,0.4)] active:scale-90" />
-                            <span className="tooltip">WhatsApp</span>
+                            <FaWhatsapp className="text-[#25D366] transition-all duration-300 group-hover:drop-shadow-[0_0_10px_#25D366]" />
                         </a>
                     </div>
                 </div>
