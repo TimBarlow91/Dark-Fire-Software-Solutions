@@ -33,7 +33,7 @@ export default function PyroSuiteNavbar({ isLoggedIn }) {
             <div className="rounded-xl w-[100%] bg-gradient-to-r from-black via-red-900 to-black shadow-[0_0_15px_rgba(255,0,0,0.7)] backdrop-blur-md">
                 <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
                     <a href="/" className="flex items-center space-x-3">
-                        <img src="/public/PyroSuite.png" alt="PyroSuite Logo" className="h-10 w-auto rounded-full drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]" />
+                        <img src="/img/PyroSuite.png" alt="PyroSuite Logo" className="h-10 w-auto rounded-full drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]" />
                         <div className="leading-tight text-white">
                             <div className="font-bold tracking-wider">PyroSuite</div>
                             <div className="text-[10px] font-semibold tracking-widest opacity-90">Secure Access</div>
