@@ -1,24 +1,22 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
-import Contact from './pages/Contact';
 import Services from './pages/Services';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer'
+import Contact from './pages/Contact';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 export default function App() {
   return (
     <Router>
-      <Navbar />
-      <main className="pt-20 px-4">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
     </Router>
   );
 }
