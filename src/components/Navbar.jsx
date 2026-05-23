@@ -9,7 +9,6 @@ export default function Navbar() {
     const navLinks = [
         { path: '/', label: 'Home' },
         { path: '/about', label: 'About' },
-        { path: '/certificates', label: 'Certificates' },
         { path: '/services', label: 'Services' },
         { path: '/contact', label: 'Contact' },
     ];
@@ -80,7 +79,7 @@ export default function Navbar() {
                         <button
                             ref={buttonRef}
                             onClick={() => setMenuOpen(!menuOpen)}
-                            className="text-white focus:outline-none"
+                            className="text-white focus:outline-none transition-transform duration-200 active:scale-90"
                         >
                             {menuOpen ? (
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,33 +87,48 @@ export default function Navbar() {
                                 </svg>
                             ) : (
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                        d="M4 6h16M4 12h16M4 18h16" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                                 </svg>
                             )}
                         </button>
 
                         {/* Mobile Dropdown Menu */}
                         <div
-                            ref={menuRef}
-                            className={`absolute right-0 mt-2 w-48 bg-black bg-opacity-90 rounded-lg border border-white/20 shadow-[0_8px_30px_rgba(0,0,0,0.5)] py-2 px-4 text-white flex flex-col space-y-1 transform transition-all duration-300 ease-in-out origin-top-right
-                                ${menuOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0 pointer-events-none'}`}
+                        ref={menuRef}
+                            className={`absolute right-0 mt-3 w-52 bg-gradient-to-b from-neutral-950 to-black rounded-xl border border-red-500/30 p-2 text-white flex flex-col transform-gpu transition-all duration-300 ease-out origin-top-right
+                                ${menuOpen 
+                                ? 'opacity-100 [transform:perspective(800px)_rotateX(0deg)_scale(1)] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.9),0_0_20px_rgba(239,68,68,0.55),0_0_50px_rgba(239,68,68,0.3)]' 
+                                : 'opacity-0 [transform:perspective(800px)_rotateX(-25deg)_scale(0.93)] pointer-events-none shadow-none'
+                            }`}
                         >
                             {navLinks.map(({ path, label }, i) => (
-                                <NavLink
-                                    key={i}
-                                    to={path}
-                                    onClick={() => setMenuOpen(false)}
-                                    className={({ isActive }) =>
-                                        `block px-2 py-1 rounded-md transition-all transform
-                                        ${isActive ? 'text-red-500 underline' : ''}
-                                        hover:bg-white/10 hover:text-red-500
-                                        ${menuOpen ? `opacity-100 translate-y-0 delay-${i * 100}` : 'opacity-0 -translate-y-1'}`
-                                    }
-                                    style={{ transitionDelay: `${i * 80}ms` }}
-                                >
-                                    {label}
-                                </NavLink>
+                                <div key={i} className="w-full flex flex-col">
+                                    <NavLink
+                                        to={path}
+                                        onClick={() => setMenuOpen(false)}
+                                        className={({ isActive }) =>
+                                            `block w-full px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 transform-gpu origin-center
+                                            ${isActive 
+                                                ? 'text-red-500 bg-red-950/20 border-l-2 border-red-500 font-semibold' 
+                                                : 'text-zinc-300'
+                                            }
+                                            hover:text-white hover:bg-gradient-to-r hover:from-neutral-900 hover:to-neutral-800
+                                            hover:scale-[1.04] hover:[transform:perspective(300px)_translateZ(12px)_rotateY(-6deg)]
+                                            hover:shadow-[-5px_5px_15px_rgba(239,68,68,0.2)]`
+                                        }
+                                        style={{ 
+                                            transitionDelay: menuOpen ? `${i * 60}ms` : '0ms',
+                                            transformStyle: 'preserve-3d'
+                                        }}
+                                    >
+                                        {label}
+                                    </NavLink>
+                                    
+                                    {/* Visual Separators */}
+                                    {i < navLinks.length - 1 && (
+                                        <div className="border-b border-white/5 my-1 mx-2" />
+                                    )}
+                                </div>
                             ))}
                         </div>
                     </div>
